@@ -37,6 +37,30 @@
         </div>
         <div class="field">
             <div class="two columns alpha">
+                <?php echo $this->formLabel('physical_place', __('Physical exhibit location')); ?>
+            </div>
+            <div class="five columns omega inputs">
+                <?php echo $this->formText('physical_place', $exhibit->physical_place); ?>
+            </div>
+        </div>
+        <div class="field">
+            <div class="two columns alpha">
+                <?php echo $this->formLabel('start_date', __('Physical exhibit start date')); ?>
+            </div>
+            <div class="five columns omega inputs">
+                <?php echo $this->formText('start_date', $exhibit->start_date, ['class' => 'bc-datepicker']); ?>
+            </div>
+        </div>
+        <div class="field">
+            <div class="two columns alpha">
+                <?php echo $this->formLabel('end_date', __('Physical exhibit end date')); ?>
+            </div>
+            <div class="five columns omega inputs">
+                <?php echo $this->formText('end_date', $exhibit->end_date, ['class' => 'bc-datepicker']); ?>
+            </div>
+        </div>
+        <div class="field">
+            <div class="two columns alpha">
                 <?php echo $this->formLabel('tags', __('Tags')); ?>
             </div>
             <div class="five columns omega inputs">
@@ -152,6 +176,8 @@
           <?php echo js_escape(url('exhibits/attachment-item-options')); ?>
         );
         Omeka.ExhibitBuilder.setUpCoverImageSelect(<?php echo json_encode(url('exhibit-builder/items/browse')); ?>);
+
+        jQuery( ".bc-datepicker" ).datepicker();
     });
 //]]>
 </script>

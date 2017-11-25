@@ -32,6 +32,27 @@ class Exhibit extends Omeka_Record_AbstractRecord implements Zend_Acl_Resource_I
      * @var string
      */
     public $credits;
+
+    /**
+     * The physical location of the exhibit
+     *
+     * @var string
+     */
+    public $physical_place;
+
+    /**
+     * The start date of the physical exhibit
+     *
+     * @var string
+     */
+    public $start_date;
+
+    /**
+     * The end date of the physical exhibit
+     *
+     * @var string
+     */
+    public $end_date;
     
     /**
      * Whether the exhibit is featured.
