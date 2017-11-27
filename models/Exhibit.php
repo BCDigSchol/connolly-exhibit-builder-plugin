@@ -41,18 +41,11 @@ class Exhibit extends Omeka_Record_AbstractRecord implements Zend_Acl_Resource_I
     public $physical_place;
 
     /**
-     * The start date of the physical exhibit
+     * The date range of the exhibit in MLA (e.g. 12 Mar.–4 Dec. 2016)
      *
      * @var string
      */
-    public $start_date;
-
-    /**
-     * The end date of the physical exhibit
-     *
-     * @var string
-     */
-    public $end_date;
+    public $physical_date_range;
     
     /**
      * Whether the exhibit is featured.

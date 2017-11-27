@@ -45,18 +45,11 @@
         </div>
         <div class="field">
             <div class="two columns alpha">
-                <?php echo $this->formLabel('start_date', __('Physical exhibit start date')); ?>
+                <?php echo $this->formLabel('physical_date_range', __('Physical exhibit dates')); ?>
             </div>
             <div class="five columns omega inputs">
-                <?php echo $this->formText('start_date', $exhibit->start_date, ['class' => 'bc-datepicker']); ?>
-            </div>
-        </div>
-        <div class="field">
-            <div class="two columns alpha">
-                <?php echo $this->formLabel('end_date', __('Physical exhibit end date')); ?>
-            </div>
-            <div class="five columns omega inputs">
-                <?php echo $this->formText('end_date', $exhibit->end_date, ['class' => 'bc-datepicker']); ?>
+                <p class="explanation"><?php echo __('MLA format, (e.g. <em>12 Mar.–4 Dec. 2016</em>)'); ?></p>
+                <?php echo $this->formText('physical_date_range', $exhibit->physical_date_range); ?>
             </div>
         </div>
         <div class="field">
@@ -176,8 +169,6 @@
           <?php echo js_escape(url('exhibits/attachment-item-options')); ?>
         );
         Omeka.ExhibitBuilder.setUpCoverImageSelect(<?php echo json_encode(url('exhibit-builder/items/browse')); ?>);
-
-        jQuery( ".bc-datepicker" ).datepicker();
     });
 //]]>
 </script>
