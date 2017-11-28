@@ -27,6 +27,13 @@ class Exhibit extends Omeka_Record_AbstractRecord implements Zend_Acl_Resource_I
     public $description;
 
     /**
+     * Short (~1 sentence) description
+     *
+     * @var string
+     */
+    public $brief_description;
+
+    /**
      * Exhibit credits.
      *
      * @var string
@@ -162,6 +169,10 @@ class Exhibit extends Omeka_Record_AbstractRecord implements Zend_Acl_Resource_I
 
         if (strlen((string)$this->theme) > 30) {
             $this->addError('theme', __('The name of your theme must be 30 characters or less.'));
+        }
+
+        if (strlen((string)$this->brief_description) > 150) {
+            $this->addError('brief_description', __('The brief_description must be 150 characters or less.'));
         }
     }
 

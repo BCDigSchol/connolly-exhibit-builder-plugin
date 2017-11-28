@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS `{$db->prefix}exhibits` (
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
     `title` VARCHAR(255) DEFAULT NULL,
     `description` TEXT,
+    `brief_description` TEXT,
     `credits` TEXT,
     `featured` TINYINT(1) DEFAULT 0,
     `public` TINYINT(1) DEFAULT 0,

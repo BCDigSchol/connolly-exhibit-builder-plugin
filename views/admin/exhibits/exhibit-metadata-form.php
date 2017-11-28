@@ -32,7 +32,17 @@
                 <?php echo $this->formLabel('description', __('Description')); ?>
             </div>
             <div class="five columns omega inputs">
+                <p class="explanation"><?php echo __('Full description used on summary page.'); ?></p>
                 <?php echo $this->formTextarea('description', $exhibit->description, array('rows'=>'8','cols'=>'40')); ?>
+            </div>
+        </div>
+        <div class="field">
+            <div class="two columns alpha">
+                <?php echo $this->formLabel('brief_description', __('Brief description')); ?>
+            </div>
+            <div class="five columns omega inputs">
+                <p class="explanation"><?php echo __('One or two sentences. Used for summaries on exhibit page.'); ?></p>
+                <?php echo $this->formTextarea('brief_description', $exhibit->brief_description, array('rows'=>'8','cols'=>'40')); ?>
             </div>
         </div>
         <div class="field">
