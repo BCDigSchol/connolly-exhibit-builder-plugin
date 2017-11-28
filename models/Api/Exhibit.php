@@ -10,6 +10,9 @@ class Api_Exhibit extends Omeka_Record_Api_AbstractRecordAdapter
         $representation['url'] = self::getResourceUrl("/exhibits/{$record->id}");
         $representation['slug'] = $record->slug;
         $representation['description'] = $record->description;
+        $representation['brief_description'] = $record->brief_description;
+        $representation['physical_place'] = $record->physical_place;
+        $representation['physical_date_range'] = $record->physical_date_range;
         $representation['credits'] = $record->credits;
         $representation['featured'] = (bool) $record->featured;
         $representation['public'] = (bool) $record->public;
