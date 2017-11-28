@@ -20,6 +20,13 @@ class Exhibit extends Omeka_Record_AbstractRecord implements Zend_Acl_Resource_I
     public $title;
 
     /**
+     * Exhibit subtitle
+     *
+     * @var string
+     */
+    public $subtitle;
+
+    /**
      * Exhibit description (in HTML).
      *
      * @var string
@@ -169,6 +176,10 @@ class Exhibit extends Omeka_Record_AbstractRecord implements Zend_Acl_Resource_I
 
         if (strlen((string)$this->theme) > 30) {
             $this->addError('theme', __('The name of your theme must be 30 characters or less.'));
+        }
+
+        if (strlen((string)$this->subtitle) > 255) {
+            $this->addError('subtitle', __('The subtitle for an exhibit must be 255 characters or less.'));
         }
 
         if (strlen((string)$this->brief_description) > 150) {

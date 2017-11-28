@@ -7,6 +7,7 @@ class Api_Exhibit extends Omeka_Record_Api_AbstractRecordAdapter
         $representation = array();
         $representation['id'] = $record->id;
         $representation['title'] = $record->title;
+        $representation['subtitle'] = $record->subtitle;
         $representation['url'] = self::getResourceUrl("/exhibits/{$record->id}");
         $representation['slug'] = $record->slug;
         $representation['description'] = $record->description;

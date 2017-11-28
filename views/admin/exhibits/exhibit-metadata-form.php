@@ -12,6 +12,14 @@
         </div>
         <div class="field">
             <div class="two columns alpha">
+                <?php echo $this->formLabel('subtitle', __('Subtitle')); ?>
+            </div>
+            <div class="five columns omega inputs">
+                <?php echo $this->formText('subtitle', $exhibit->subtitle); ?>
+            </div>
+        </div>
+        <div class="field">
+            <div class="two columns alpha">
                 <?php echo $this->formLabel('slug', __('Slug')); ?>
             </div>
             <div class="five columns omega inputs">
